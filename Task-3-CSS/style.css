@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 500px;
+    text-align: center; 
+    box-sizing: border-box;
+  }
+  
+  .photo img {
+    max-width: 100%; 
+    height: auto;
+  }
+  a{color:black}
+  button {
+    width:100%;
+    text-align: center;
+    background: linear-gradient(to right, #4190ff, #ff4b2b); 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    font-family: Arial, sans-serif; 
+    cursor: pointer; 
+    transition: 0.42s;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); 
+  }

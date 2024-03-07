@@ -19,7 +19,6 @@ table(5);
 //          - cannot be updated and re-declared
 
 // Q3 - Function "max" to find the maximum element and determine if it's even or odd:
-
 function max(arr) {
     
     let max = arr[0];
@@ -62,4 +61,6 @@ const intervalId = setInterval(() => {
         count++;
     }
 }, 10000);
+
+
 
