@@ -61,7 +61,8 @@ main h1 span {
 }
 
 main p {
-  color: rgb(71, 61, 61);
+  font-size: 20px;
+  color: rgb(110, 110, 110);
 }
 
 main button {
@@ -74,7 +75,7 @@ main button {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   main {
     max-width: 100%;
     flex-direction: column;
@@ -84,6 +85,9 @@ main button {
   }
   main h1{
     font-size: 45px;
+  }
+  main p {
+    font-size: 16px;
   }
   main section{
     padding: 10px 25px;
@@ -99,13 +103,22 @@ main button {
   nav ul li{
     font-size: medium;;
   }
+
 }
 
 @media screen and (max-width: 600px) {
   main {
     flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
+    padding: 5px 10px;
+    width: 90%;
+    margin: 0;
+  }
+  main h1{
+    font-size: 35px;
+  }
+  main p {
+    font-size: 12px;
+
   }
   
   main img {
