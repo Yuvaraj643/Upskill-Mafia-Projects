@@ -143,6 +143,14 @@ main button {
   main p {
     font-size: 12px;
   }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  nav button{
+    margin-left: auto;
+  }
 
   main img {
     margin: 0 auto;
@@ -163,7 +171,10 @@ main button {
     display: none;
   }
   .hamburger-icon {
+    margin-left: 8px;
     display: block;
+    cursor: pointer;
+  }
   }
 
   .mobile-menu {
