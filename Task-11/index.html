@@ -6,19 +6,40 @@
     <title>Task-10</title>
 </head>
 <body>
-    <h1>Compound Interest Calculator</h1>
+    <h1>Check if a Number is Even or Odd</h1>
     <script>
-        // Predefined variables
-        const P = 50000; // Principal amount
-        const r = 0.08; // Rate of interest (8%)
-        const n = 12; // Number of times interest is compounded per year
-        const t = 3; // Time in years
+        
+        const number = 20;
+        const number1 = 5;
+        const number2 = 40;
+        const number3 = 97;
+        
+        if (number % 2 === 0) {
+            console.log("The number", number, "is even.");
+        } else {
+            console.log("The number", number, "is odd.");
+        }
 
-        // Formula for compound interest
-        const A = P * Math.pow(1 + (r / n), n * t);
+        if (number1 % 2 === 0) {
+            console.log("The number", number1, "is even.");
 
-        // Display the calculated compound interest
-        console.log("The compound interest after", t, "years is:", A.toFixed(3));
+        } else {
+            console.log("The number", number1, "is odd.");
+        }
+
+        if (number2 % 2 === 0) {
+            console.log("The number2", number2, "is even.");
+
+        } else {
+            console.log("The number2", number2, "is odd.");
+        }
+
+        if (number3 % 2 === 0) {
+            console.log("The number", number3, "is even.");
+
+        } else {
+            console.log("The number", number3, "is odd.");
+        }
     </script>
 </body>
 </html>
