@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-10</title>
+</head>
+<body>
+    <h1>Compound Interest Calculator</h1>
+    <script>
+        // Predefined variables
+        const P = 50000; // Principal amount
+        const r = 0.08; // Rate of interest (8%)
+        const n = 12; // Number of times interest is compounded per year
+        const t = 3; // Time in years
+
+        // Formula for compound interest
+        const A = P * Math.pow(1 + (r / n), n * t);
+
+        // Display the calculated compound interest
+        console.log("The compound interest after", t, "years is:", A.toFixed(3));
+    </script>
+</body>
+</html>
