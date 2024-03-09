@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <p id="results"></p>
+    
+    <script>
+        function sumOfDigits(number) {
+            let sum = 0;
+            while (number > 0) {
+                sum += number % 10;
+                number = Math.floor(number / 10);
+            }
+            return sum;
+        }
+
+        function isArmstrongNumber(number) {
+            let temp = number;
+            let sum = 0;
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += Math.pow(digit, 3);
+                temp = Math.floor(temp / 10);
+            }
+            return sum === number;
+        }
+
+        function isPrime(number) {
+            if (number <= 1) return false;
+            if (number <= 3) return true;
+            if (number % 2 === 0 || number % 3 === 0) return false;
+            let i = 5;
+            while (i * i <= number) {
+                if (number % i === 0 || number % (i + 2) === 0) return false;
+                i += 6;
+            }
+            return true;
+        }
+
+        function factors(number) {
+            let factorsList = [];
+            for (let i = 1; i <= Math.floor(Math.sqrt(number)); i++) {
+                if (number % i === 0) {
+                    factorsList.push(i);
+                    if (number / i !== i) {
+                        factorsList.push(number / i);
+                    }
+                }
+            }
+            return factorsList.sort((a, b) => a - b);
+        }
+
+        const inputNumber = 153;
+
+        const sum = sumOfDigits(inputNumber);
+        const isArmstrong = isArmstrongNumber(inputNumber);
+        const isPrimeNum = isPrime(inputNumber);
+        const allFactors = factors(inputNumber);
+
+        const resultsElement = document.getElementById("results");
+
+        resultsElement.innerHTML = `
+            <strong>Number:</strong> ${inputNumber}<br>
+            <strong>Sum of its digits:</strong> ${sum}<br>
+            <strong>Is it an Armstrong number?</strong> ${isArmstrong ? "Yes" : "No"}<br>
+            <strong>Is it a prime number?</strong> ${isPrimeNum ? "Yes" : "No"}<br>
+            <strong>Factors:</strong> ${allFactors.join(", ")}
+        `;
+    </script>
+</body>
+</html>
