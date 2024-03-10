@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-14</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>JavaScript Assignment 14 : Promise-based Divide Function</h1>
+
+    <script>
+      const divide = (numerator, denominator) => {
+        return new Promise((resolve, reject) => {
+          if (denominator === 0) {
+            reject(new Error("Division by zero is not allowed."));
+          } else {
+            resolve(numerator / denominator);
+          }
+        });
+      };
+
+      const handleInputAndDisplayOutput = () => {
+        const numerator = parseFloat(
+          document.getElementById("numerator").value
+        );
+        const denominator = parseFloat(
+          document.getElementById("denominator").value
+        );
+
+        document.getElementById(
+          "output"
+        ).innerHTML = `Dividing ${numerator} by ${denominator}...<br>`;
+
+        divide(numerator, denominator)
+          .then((result) => {
+            document.getElementById("output").innerHTML += `Result: ${result}`;
+          })
+          .catch((error) => {
+            document.getElementById(
+              "output"
+            ).innerHTML += `Error: ${error.message}`;
+          });
+      };
+    </script>
+
+    <div>
+      <label for="numerator">Numerator:</label>
+      <input type="number" id="numerator" />
+    </div>
+    <div>
+      <label for="denominator">Denominator:</label>
+      <input type="number" id="denominator" />
+    </div>
+    <button onclick="handleInputAndDisplayOutput()">Divide</button>
+
+    <div id="output"></div>
+  </body>
+</html>
